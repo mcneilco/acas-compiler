@@ -13,7 +13,7 @@ Example settings.json:
 
 ```json
 {
-	"installationDirectory": "/Users/bbolt/Desktop/build",
+	"installationDirectory": "build",
 	"copyFromPreviousInstall": [
 		"privateUploads",
 		"r_libs",
