@@ -40,7 +40,7 @@ exports.runNpmInstall = function(sourcePaths, paths, callback) {
   environment.BUILD_PATH = paths.buildDirectory;
   exports.logger.info("using BUILD_PATH=" + environment.BUILD_PATH);
   util = require('util');
-  fs.writeFile(paths.sourcesDirectory + "/base/rebuild.sh", "export BUILD_PATH=" + environment.BUILD_PATH + "\nexport SOURCE_DIRECTORIES=" + environment.SOURCE_DIRECTORIES + "\nnpm install\ngrunt execute:prepare_config_files\ngrunt execute:prepare_module_conf_json");
+  fs.writeFile(paths.sourcesDirectory + "/base/rebuild.sh", "export BUILD_PATH=" + environment.BUILD_PATH + "\nexport SOURCE_DIRECTORIES=" + environment.SOURCE_DIRECTORIES + "\nnpm install\gulp execute:prepare_config_files\gulp execute:prepareModuleConfJSON");
   install = void 0;
   install = spawn(installCommand, ['install'], {
     cwd: paths.sourcesDirectory + "/base",
