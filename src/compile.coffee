@@ -37,7 +37,7 @@ exports.runNpmInstall = (sourcePaths, paths, callback) ->
 		callback code
 
 exports.runPrepareConfigFiles = (paths, callback) ->
-	executePrepareConfigFilesCommand = "grunt"
+	executePrepareConfigFilesCommand = "gulp"
 	environment = process.env
 	prepareConfigs = spawn(executePrepareConfigFilesCommand, ["execute:prepare_config_files"]
 		{

@@ -54,7 +54,7 @@ exports.runNpmInstall = function(sourcePaths, paths, callback) {
 
 exports.runPrepareConfigFiles = function(paths, callback) {
   var environment, executePrepareConfigFilesCommand, prepareConfigs;
-  executePrepareConfigFilesCommand = "grunt";
+  executePrepareConfigFilesCommand = "gulp";
   environment = process.env;
   prepareConfigs = spawn(executePrepareConfigFilesCommand, ["execute:prepare_config_files"], {
     cwd: paths.sourcesDirectory + "/base",
