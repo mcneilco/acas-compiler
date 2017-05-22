@@ -27,7 +27,7 @@ exports.runNpmInstall = (sourcePaths, paths, callback) ->
 	environment.BUILD_PATH = paths.buildDirectory
 	exports.logger.info "using BUILD_PATH=#{environment.BUILD_PATH}"
 	util = require('util')
-	fs.writeFile "#{paths.sourcesDirectory}/base/rebuild.sh", "export BUILD_PATH=#{environment.BUILD_PATH}\nexport SOURCE_DIRECTORIES=#{environment.SOURCE_DIRECTORIES}\nnpm install\ngrunt execute:prepare_config_files\ngrunt execute:prepare_module_conf_json\n"
+	fs.writeFile "#{paths.sourcesDirectory}/base/rebuild.sh", "export BUILD_PATH=#{environment.BUILD_PATH}\nexport SOURCE_DIRECTORIES=#{environment.SOURCE_DIRECTORIES}\nnpm install\ngulp execute:prepare_config_files\ngulp execute:prepareModuleConfJSON\n"
 	install = undefined
 	install = spawn(installCommand, [ 'install' ],
 		cwd: "#{paths.sourcesDirectory}/base",
@@ -37,7 +37,7 @@ exports.runNpmInstall = (sourcePaths, paths, callback) ->
 		callback code
 
 exports.runPrepareConfigFiles = (paths, callback) ->
-	executePrepareConfigFilesCommand = "grunt"
+	executePrepareConfigFilesCommand = "gulp"
 	environment = process.env
 	prepareConfigs = spawn(executePrepareConfigFilesCommand, ["execute:prepare_config_files"]
 		{
