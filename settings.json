@@ -1,50 +1,50 @@
 {
-	"installationDirectory": "build",
-	"copyFromPreviousInstall": [
-		"privateUploads",
-		"r_libs",
-		"node_modules"
-	],
-	"r": {
-		"branch": "master"
-	},
-	"additionalCommands": [
-	{
-		"name": "config.r",
-		"command": "Rscript",
-		"args": [
-			"conf/config.R"
-		]
-	}
-	],
-	"sources": [
-	{
-		"_comment": "note, base must always be present",
-		"name": "base",
-		"type": "git",
-		"repository": "https://github.com/mcneilco/acas.git",
-		"options": [
-			"--branch=master",
-			"--single-branch"
-		]
-	},
-	{
-		"name": "mcneilco_custom",
-		"type": "git",
-		"repository": "https://bitbucket.org/mcneilco/acas.git",
-		"options": [
-			"--branch=master",
-			"--single-branch"
-		]
-	},
-	{
-			"name": "acas_custom_host4",
-			"type": "git",
-			"repository": "https://bitbucket.org/mcneilco/acas_custom_host4.git",
-			"options": [
-				"--branch=master",
-				"--single-branch"
-			]
-		}
-	]
+  "additionalCommands": [
+    {
+      "args": [
+        "conf/config.R"
+      ], 
+      "command": "Rscript", 
+      "name": "config.r"
+    }
+  ], 
+  "copyFromPreviousInstall": [
+    "privateUploads", 
+    "r_libs", 
+    "node_modules"
+  ], 
+  "installationDirectory": "build", 
+  "r": {
+    "branch": "master"
+  }, 
+  "sources": [
+    {
+      "_comment": "note, base must always be present", 
+      "name": "base", 
+      "options": [
+        "--branch=master", 
+        "--single-branch"
+      ], 
+      "repository": "https://github.com/mcneilco/acas.git", 
+      "type": "git"
+    }, 
+    {
+      "name": "mcneilco_custom", 
+      "options": [
+        "--branch=master", 
+        "--single-branch"
+      ], 
+      "repository": "https://bitbucket.org/mcneilco/acas.git", 
+      "type": "git"
+    }, 
+    {
+      "name": "acas_custom_host4", 
+      "options": [
+        "--branch=master", 
+        "--single-branch"
+      ], 
+      "repository": "https://bitbucket.org/mcneilco/acas_custom_host4.git", 
+      "type": "git"
+    }
+  ]
 }
