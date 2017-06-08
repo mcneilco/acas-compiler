@@ -6,7 +6,7 @@
 		"node_modules"
 	],
 	"r": {
-		"branch": "1.10-release"
+		"branch": "master"
 	},
 	"additionalCommands": [
 	{
@@ -24,7 +24,7 @@
 		"type": "git",
 		"repository": "https://github.com/mcneilco/acas.git",
 		"options": [
-			"--branch=1.10-release",
+			"--branch=master",
 			"--single-branch"
 		]
 	},
@@ -33,7 +33,7 @@
 		"type": "git",
 		"repository": "https://bitbucket.org/mcneilco/acas.git",
 		"options": [
-			"--branch=1.10-release-mcneilco-private",
+			"--branch=master",
 			"--single-branch"
 		]
 	},
